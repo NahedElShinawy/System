@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    //قررت ادارة المعهد منح درجات رافة 5 درجات اضافية للطلاب 
+    //الزين يتراوح درجاتهم بين 40 ,49,ثم حساب متوسط درجاتهم بعد التعديل لتقيم اثر القرار
+
+const students = [
+    {id: 1, average: 85 },
+    {id: 2, average: 42 }, // متعثر
+    {id: 3, average: 90 },
+    {id: 4, average: 48 }, // متعثر
+];
+
+const strugglingStudents = students.filter*( s => s. average >= 40 && s.average <= 49 ); // 42 , 48
+const upgradedGrades = strugglingStudents.map(s=> s.average + 5 ); // 47 , 53
+
+const totalUpgraded = upgradedGrades.reduce((sum , grade) => sum + grade ,0); // 0 + 47 = 47  47 + 53 = 100
+
+let upgradedAverage = 0;
+
+if (strugglingStudents > 0 ){
+    upgradedAverage = totalUpgraded / strugglingStudents.length; //5
+ }
+
+
+console.log("متوسط درجات الطلاب بعد الرافة", upgradedAverage);
+
+    </script>
+    
+</head> 
+</body>
+</html>
